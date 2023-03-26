@@ -1,0 +1,95 @@
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.game-board{
+	width: 100%;
+	height: 590px;
+	border-bottom: 15px solid #4a3a29;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(#121211, #858381 );
+}
+
+.pipe{
+	position: absolute;
+	bottom: 0;
+	width: 120px;
+	animation: pipe-animation 0.8s infinite linear;
+}
+
+.rengo{
+    transform: scaleX(-1);
+	width: 150px;
+	position: absolute;
+	bottom: 0;
+}
+
+.jump{
+	animation: jump 500ms ease-out;
+}
+
+.ne{
+	transform: scaleX(-1);
+	width: 150px;
+	right: 1px;
+	bottom: 0;
+	position: absolute;
+	animation: nezu 1s;
+}
+
+.estrela::before {
+	content: "\2605";
+	color: #c5ceed ;
+	font-size: 2rem;
+}
+
+.lua{
+	width: 20%;
+}
+
+@keyframes nezu{
+	from{
+	left: 80%;
+	}
+	to{
+	left: 100%;
+	};
+}
+
+@keyframes jump{
+
+	0%{
+	bottom: 0;
+	}
+	
+	40%{
+	bottom: 180px
+	}
+
+	50%{
+	bottom: 180px;
+	}
+	
+	60%{
+	bottom: 180px
+	}
+
+	100%{
+	bottom: 0px
+	}
+}
+
+
+@keyframes pipe-animation{
+	from{
+	right: 0;
+	}
+	
+	to{
+	right: 100%
+	}
+}
+
